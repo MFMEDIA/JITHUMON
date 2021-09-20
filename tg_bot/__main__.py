@@ -19,7 +19,7 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
 
-ഹായ് {}, എന്റെ പേര് {}! ഞാൻ [ഇദ്ദേഹം](tg://user?id={}) നോക്കി നടത്തുന്ന ഒരു അടിപൊളി അഡ്മിൻ ബോട്ടാണ്.
+ഹായ് {}, എന്റെ പേര് {} <b>ഞാൻ ഒരു ഗ്രൂപ്പ് മാനേജർ ബോട്ട് ആണ്,   മൂവി ഫാക്ടറി ഗ്രൂപ്പിന് വേണ്ടി മാത്രമാണ് എന്നെ നിർമിച്ചിരിക്കുന്നത്. വെറുതെ അവിടേം ഇവിടേം ഞെക്കി സമയം കളയണ്ട ..എന്നെ മൂവീ ഫാക്ടറി ഗ്രൂപ്പിൽ മാത്രമേ ഉപയോഗിക്കാൻ കഴിയൂ.</b>
 
 
 
@@ -130,7 +130,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
 
                 parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
-                   [[InlineKeyboardButton(text="Channel", url="https://t.me/MF_MOVIES1"),  InlineKeyboardButton(text="Group", url="https://t.me/MF_CHATGROUP") ]]))
+                   [[InlineKeyboardButton(text="Mᴀɪɴ Gʀᴏᴜᴘ", url="https://t.me/MF_CHATGROUP"),  InlineKeyboardButton(text="Mᴀɪɴ Cʜᴀɴɴᴇʟ", url="https://t.me/MF_OFFICIAL") ]]))
 
     else:
         update.effective_message.reply_text("ചത്തിട്ടില്ലാ...")
